@@ -11,6 +11,8 @@
         "lint": "eslint --ext .js,.vue src",
         "test": "echo \"No test specified\" && exit 0",
         "dev": "quasar dev",
+        "dev:ios": "quasar dev -m capacitor -T ios",
+        "dev:android": "quasar dev -m capacitor -T android",
         "build": "quasar build",
         "build:pwa": "quasar build -m pwa"
     },
