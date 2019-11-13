@@ -3,15 +3,15 @@
         <q-header elevated>
             <q-toolbar>
                 <q-toolbar-title>
-                    Quasar App
+                    {{ title }}
                 </q-toolbar-title>
             </q-toolbar>
         </q-header>
         <q-page-container>
-            <router-view />
+            <router-view/>
         </q-page-container>
         <q-footer>
-            <tabbed-navigation />
+            <tabbed-navigation/>
         </q-footer>
     </q-layout>
 </template>
@@ -24,6 +24,12 @@
 
         components: {
             TabbedNavigation,
+        },
+
+        computed: {
+            title() {
+                return this.$route.meta.title;
+            },
         },
     };
 </script>
