@@ -16,17 +16,9 @@
     </q-layout>
 </template>
 
-<script>
-    export default {
-        name: 'LoginPage.vue',
-        data: () => ({
-        }),
-    };
-</script>
-
 <style scoped lang="scss">
     .bg-gradient {
-        background-image: linear-gradient(#FEC440, #41CCDD);
+        background-image: $main-gradient;
     }
     .logo-img {
         padding-top: 15px;

@@ -2,9 +2,6 @@ const routes = [
     {
         path: '/',
         component: () => import('../pages/LoginPage.vue'),
-        meta: {
-            title: 'Login',
-        },
     },
     {
         path: '/',
