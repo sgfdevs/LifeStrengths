@@ -7,6 +7,22 @@ const routes = [
                 path: '',
                 component: () => import('../pages/Index.vue'),
             },
+            {
+                path: 'contacts',
+                component: () => import('pages/ContactsPage.vue'),
+            },
+            {
+                path: 'location',
+                component: () => import('pages/LocationPage.vue'),
+            },
+            {
+                path: 'assignment',
+                component: () => import('pages/AssignmentPage.vue'),
+            },
+            {
+                path: 'menu',
+                component: () => import('pages/MenuPage.vue'),
+            },
         ],
     },
 ];
