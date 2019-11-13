@@ -9,19 +9,21 @@
         </q-header>
         <q-page-container>
             <router-view />
-            <navigation />
         </q-page-container>
+        <q-footer>
+            <tabbed-navigation />
+        </q-footer>
     </q-layout>
 </template>
 
 <script>
-    import Navigation from 'components/Navigation';
+    import TabbedNavigation from '../components/TabbedNavigation';
 
     export default {
         name: 'MyLayout',
 
         components: {
-            Navigation,
+            TabbedNavigation,
         },
     };
 </script>

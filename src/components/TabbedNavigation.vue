@@ -17,9 +17,9 @@
 </script>
 
 <style scoped>
-    .fixed-nav {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
+    /*.fixed-nav {*/
+    /*    position: fixed;*/
+    /*    bottom: 0;*/
+    /*    width: 100%;*/
+    /*}*/
 </style>

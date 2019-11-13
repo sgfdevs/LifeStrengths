@@ -1,7 +1,7 @@
 const routes = [
     {
         path: '/',
-        component: () => import('../layouts/MyLayout.vue'),
+        component: () => import('../layouts/MainLayout.vue'),
         children: [
             {
                 path: '',
@@ -9,19 +9,19 @@ const routes = [
             },
             {
                 path: 'contacts',
-                component: () => import('pages/ContactsPage.vue'),
+                component: () => import('../pages/ContactsPage.vue'),
             },
             {
                 path: 'location',
-                component: () => import('pages/LocationPage.vue'),
+                component: () => import('../pages/LocationPage.vue'),
             },
             {
                 path: 'assignment',
-                component: () => import('pages/AssignmentPage.vue'),
+                component: () => import('../pages/AssignmentPage.vue'),
             },
             {
                 path: 'menu',
-                component: () => import('pages/MenuPage.vue'),
+                component: () => import('../pages/MenuPage.vue'),
             },
         ],
     },
