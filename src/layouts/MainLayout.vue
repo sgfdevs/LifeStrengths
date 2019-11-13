@@ -20,8 +20,6 @@
     import TabbedNavigation from '../components/TabbedNavigation';
 
     export default {
-        name: 'MyLayout',
-
         components: {
             TabbedNavigation,
         },
