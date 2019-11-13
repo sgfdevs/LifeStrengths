@@ -4,7 +4,7 @@
         inline-label
         class="fixed-nav bg-primary text-white shadow-2"
     >
-        <q-route-tab exact name="mails" icon="home" to="/" />
+        <q-route-tab exact name="mails" icon="home" to="/"/>
         <q-route-tab exact name="contacts" icon="contacts" to="/contacts"/>
         <q-route-tab exact name="location" icon="where_to_vote" to="/location"/>
         <q-route-tab exact name="assignment" icon="assignment" to="/assignment"/>
@@ -12,9 +12,9 @@
     </q-tabs>
 </template>
 
-<scripts>
-
-</scripts>
+<script>
+    export default {};
+</script>
 
 <style scoped>
     .fixed-nav {
