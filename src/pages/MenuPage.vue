@@ -1,10 +1,10 @@
 <template>
-    <div>
+    <q-page>
         <div class="banner">
             <q-avatar
                 class="avatar">
                 <img
-                    src="https://i.pravatar.cc"
+                    src="https://i.pravatar.cc/150"
                     style="border: 2px solid white"
                 >
             </q-avatar>
@@ -21,7 +21,7 @@
                 </q-item-section>
             </q-item>
         </q-list>
-    </div>
+    </q-page>
 </template>
 
 <script>

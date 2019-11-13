@@ -13,5 +13,9 @@
 </template>
 
 <script>
-    export default {};
+    export default {
+        data: () => ({
+            tab: 'mails',
+        }),
+    };
 </script>
