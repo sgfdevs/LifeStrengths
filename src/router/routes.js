@@ -1,10 +1,17 @@
 const routes = [
     {
         path: '/',
+        component: () => import('../pages/LoginPage.vue'),
+        meta: {
+            title: 'Login',
+        },
+    },
+    {
+        path: '/',
         component: () => import('../layouts/MainLayout.vue'),
         children: [
             {
-                path: '',
+                path: 'home',
                 component: () => import('../pages/Index.vue'),
                 meta: {
                     title: 'Home',
