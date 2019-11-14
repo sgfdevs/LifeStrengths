@@ -4,35 +4,49 @@ const routes = [
         component: () => import('../pages/LoginPage.vue'),
     },
     {
-        path: '/',
+        path: '',
         component: () => import('../layouts/MainLayout.vue'),
         children: [
             {
-                path: 'home',
+                path: '/home',
                 component: () => import('../pages/Index.vue'),
                 meta: {
                     title: 'Home',
                 },
             },
             {
-                path: 'contacts',
-                component: () => import('../pages/ContactsPage.vue'),
+                path: 'i-need-help',
+                component: () => import('../pages/INeedHelp/Listing.vue'),
                 meta: {
-                    title: 'Context',
+                    title: 'I Need Help',
                 },
             },
             {
-                path: 'location',
-                component: () => import('../pages/LocationPage.vue'),
+                path: 'i-need-help/emergency',
+                component: () => import('../pages/INeedHelp/EmergencyForm.vue'),
                 meta: {
-                    title: 'Location',
+                    title: 'I Have an Emergency',
                 },
             },
             {
-                path: 'assignment',
-                component: () => import('../pages/AssignmentPage.vue'),
+                path: 'i-need-help/need-to-leave',
+                component: () => import('../pages/INeedHelp/LeaveForm.vue'),
                 meta: {
-                    title: 'Assignment',
+                    title: 'I Need to Leave',
+                },
+            },
+            {
+                path: 'i-need-help/need-a-ride',
+                component: () => import('../pages/INeedHelp/RideForm.vue'),
+                meta: {
+                    title: 'I Need a Ride',
+                },
+            },
+            {
+                path: 'i-need-help/directions',
+                component: () => import('../pages/INeedHelp/DirectionsForm.vue'),
+                meta: {
+                    title: 'I Need Directions',
                 },
             },
             {

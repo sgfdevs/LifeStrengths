@@ -32,7 +32,7 @@
                     {
                         color: 'negative',
                         name: 'announcement',
-                        title: 'I Need Help',
+                        title: 'INeedHelp',
                     },
                     {
                         color: 'grey-8',

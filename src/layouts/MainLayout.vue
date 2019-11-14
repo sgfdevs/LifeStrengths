@@ -1,7 +1,7 @@
 <template>
     <q-layout view="lHh Lpr lFf">
-        <q-header elevated>
-            <q-toolbar>
+        <q-header>
+            <q-toolbar class="bg-toolbar">
                 <q-toolbar-title>
                     {{ title }}
                 </q-toolbar-title>
@@ -31,3 +31,9 @@
         },
     };
 </script>
+
+<style lang="scss">
+    .bg-toolbar {
+        background-color: $tool-bar;
+    }
+</style>
