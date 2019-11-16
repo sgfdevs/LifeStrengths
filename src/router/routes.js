@@ -19,6 +19,7 @@ const routes = [
                 component: () => import('../pages/INeedHelp/Listing.vue'),
                 meta: {
                     title: 'I Need Help',
+                    backButton: true,
                 },
             },
             {
@@ -26,6 +27,8 @@ const routes = [
                 component: () => import('../pages/INeedHelp/EmergencyForm.vue'),
                 meta: {
                     title: 'I Have an Emergency',
+                    toolbarColor: 'warning',
+                    backButton: true,
                 },
             },
             {
@@ -33,6 +36,7 @@ const routes = [
                 component: () => import('../pages/INeedHelp/LeaveForm.vue'),
                 meta: {
                     title: 'I Need to Leave',
+                    backButton: true,
                 },
             },
             {
@@ -40,6 +44,7 @@ const routes = [
                 component: () => import('../pages/INeedHelp/RideForm.vue'),
                 meta: {
                     title: 'I Need a Ride',
+                    backButton: true,
                 },
             },
             {
@@ -47,6 +52,7 @@ const routes = [
                 component: () => import('../pages/INeedHelp/DirectionsForm.vue'),
                 meta: {
                     title: 'I Need Directions',
+                    backButton: true,
                 },
             },
             {

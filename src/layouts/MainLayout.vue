@@ -1,7 +1,14 @@
 <template>
     <q-layout view="lHh Lpr lFf">
         <q-header>
-            <q-toolbar class="bg-toolbar">
+            <q-toolbar :class="toolbarClass">
+                <q-btn
+                    flat
+                    rounded
+                    dense
+                    v-if="$route.meta.backButton"
+                    @click="$router.go(-1)"
+                    icon="arrow_back"></q-btn>
                 <q-toolbar-title>
                     {{ title }}
                 </q-toolbar-title>
@@ -28,12 +35,16 @@
             title() {
                 return this.$route.meta.title;
             },
+            toolbarClass() {
+                if (this.$route.meta.toolbarColor === 'warning') {
+                    return 'bg-negative';
+                }
+                return 'bg-primary';
+            },
         },
     };
 </script>
 
-<style lang="scss">
-    .bg-toolbar {
-        background-color: $tool-bar;
-    }
+<style scoped lang="scss">
+
 </style>

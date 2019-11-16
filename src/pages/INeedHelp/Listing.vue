@@ -1,26 +1,44 @@
 <template>
-    <q-page-container class=" bg-page">
+    <q-page-container class="bg-page">
         <q-page class="q-px-md">
             <q-list class="q-gutter-lg">
                 <help-service-card
                     title="I need directions"
                     description="I'm lost or don't know how to get somewhere."
-                    to="emergency"></help-service-card>
+                    to="/"></help-service-card>
                 <help-service-card
                     title="I need a ride"
                     description="I don't have a way to get somewhere I need to go."
-                    to="emergency"></help-service-card>
+                    to="/"></help-service-card>
                 <help-service-card
                     title="I need to leave"
                     description="I need someone to pick me up from a bad situation."
-                    to="emergency"></help-service-card>
+                    to="/"></help-service-card>
                 <help-service-card
                     class="emergency-card"
                     title="I have an emergency"
                     description="I'm in danger or in an extreme situation."
-                    to="emergency"></help-service-card>
+                    to="/i-need-help/emergency"></help-service-card>
             </q-list>
         </q-page>
+
+        <q-dialog @hide="removeUrlQuery" :value="showPopup">
+            <q-card>
+                <q-card-section>
+                <div class="text-h6 text-primary">Help Requested</div>
+                </q-card-section>
+
+                <q-card-section>
+                    <p class="text-body1">
+                        Your life coach has been notified of your request, including your current location.
+                    </p>
+                </q-card-section>
+
+                <q-card-actions align="right">
+                <q-btn flat label="OK" color="secondary" v-close-popup/>
+                </q-card-actions>
+            </q-card>
+        </q-dialog>
     </q-page-container>
 </template>
 
@@ -28,11 +46,21 @@
     import HelpServiceCard from '../../components/HelpServiceCard';
 
     export default {
+        data: () => ({
+            showPopup: false,
+        }),
         components: {
             HelpServiceCard,
         },
         created() {
-            console.log('WTF');
+            if (this.$route.query.messageSent === 'true') {
+                this.showPopup = true;
+            }
+        },
+        methods: {
+            removeUrlQuery() {
+                this.$router.go(-1);
+            },
         },
     };
 </script>

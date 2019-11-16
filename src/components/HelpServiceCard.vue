@@ -1,6 +1,6 @@
 <template>
-    <q-item clickable class="q-pa-none">
-        <q-card square class="card-hoverable" @click="navigateToHelpService">
+    <q-item :to="to" class="q-pa-none">
+        <q-card square class="card-hoverable">
             <q-card-section>
                 <h6 class="q-ma-sm">{{ title }}</h6>
                 <p class="q-ma-sm">{{ description }}</p>
@@ -17,12 +17,6 @@
             description: String,
             to: String,
         },
-        methods: {
-            navigateToHelpService() {
-                this.$router.push(this.to);
-                console.log('Card Clicked!');
-            },
-        },
     };
 </script>
 
@@ -34,7 +28,7 @@
             background-color:rgba(0, 0, 0, 0.075);
         }
         h6 {
-            color: $tool-bar;
+            color: $primary;
         }
     }
 </style>
