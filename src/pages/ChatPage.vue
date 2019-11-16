@@ -5,9 +5,10 @@
                 <message-groups/>
             </q-scroll-area>
             <message-list
-                class="col-grow scroll overflow-hidden"
-                :style="scrollAreaStyle"
-                :group="selectedGroup"/>
+                class="col-grow"
+                :navigation-offset="navigationOffset"
+                :group="selectedGroup"
+            />
         </div>
     </q-page>
 </template>
@@ -16,8 +17,11 @@
     import MessageGroups from '../components/MessageGroups';
     import MessageList from '../components/MessageList';
 
+    let messageNum = 0;
+
     function generateMessages(number) {
         return [...Array(number)].map(() => {
+            messageNum += 1;
             const isMe = Math.random() >= 0.5;
             return {
                 author: {
@@ -25,7 +29,7 @@
                     img: 'https://i.pravatar.cc/50',
                     id: isMe ? 0 : 1,
                 },
-                body: 'Good Morning!',
+                body: `Message number ${messageNum}`,
                 createdAt: new Date(),
             };
         });
@@ -51,7 +55,7 @@
         computed: {
             scrollAreaStyle() {
                 return {
-                    height: this.offset ? `calc(100vh - ${this.offset}px)` : '100vh',
+                    height: this.navigationOffset ? `calc(100vh - ${this.navigationOffset}px)` : '100vh',
                 };
             },
         },
@@ -66,17 +70,9 @@
             },
             addMessage() {
                 this.groups[0].messages.push(...generateMessages(1));
-                this.scrollToBottom();
-            },
-            scrollToBottom() {
-                // this.$nextTick(() => {
-                //     window.scrollTo(0, document.body.scrollHeight);
-                // });
             },
         },
         mounted() {
-            this.scrollToBottom();
-
             this.$options.interval = window.setInterval(this.addMessage.bind(this), 5000);
         },
         beforeDestroy() {
