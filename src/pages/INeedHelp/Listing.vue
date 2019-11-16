@@ -1,5 +1,5 @@
 <template>
-    <q-page-container class=" bg-page">
+    <q-page-container class="bg-page">
         <q-page class="q-px-md">
             <q-list class="q-gutter-lg">
                 <help-service-card
@@ -21,6 +21,24 @@
                     to="/i-need-help/emergency"></help-service-card>
             </q-list>
         </q-page>
+
+        <q-dialog @hide="removeUrlQuery" :value="showPopup">
+            <q-card>
+                <q-card-section>
+                <div class="text-h6 text-primary">Help Requested</div>
+                </q-card-section>
+
+                <q-card-section>
+                    <p class="text-body1">
+                        Your life coach has been notified of your request, including your current location.
+                    </p>
+                </q-card-section>
+
+                <q-card-actions align="right">
+                <q-btn flat label="OK" color="secondary" v-close-popup/>
+                </q-card-actions>
+            </q-card>
+        </q-dialog>
     </q-page-container>
 </template>
 
@@ -28,6 +46,9 @@
     import HelpServiceCard from '../../components/HelpServiceCard';
 
     export default {
+        data: () => ({
+            showPopup: false,
+        }),
         components: {
             HelpServiceCard,
         },
@@ -35,6 +56,11 @@
             if (this.$route.query.messageSent === 'true') {
                 this.showPopup = true;
             }
+        },
+        methods: {
+            removeUrlQuery() {
+                this.$router.go(-1);
+            },
         },
     };
 </script>

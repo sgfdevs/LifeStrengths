@@ -26,7 +26,10 @@
             </q-item>
         </q-list>
         <div class="full-width row justify-center content-end q-my-lg">
-            <q-btn label="Send as emergency" class="full-width bg-negative text-white btn-emergency"></q-btn>
+            <q-btn
+                label="Send as emergency"
+                @click="onButtonTap"
+                class="full-width bg-negative text-white btn-emergency"></q-btn>
         </div>
     </q-page>
 </template>
@@ -39,8 +42,8 @@
         }),
         methods: {
             onButtonTap() {
-                this.$router.push({
-                    path: '',
+                this.$router.replace({
+                    path: '/i-need-help',
                     query: {
                         messageSent: 'true',
                     },
