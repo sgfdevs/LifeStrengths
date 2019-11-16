@@ -13,7 +13,7 @@
         <q-tab class="q-px-xs" name="menu" icon="menu" @click="$emit('menuClick')" />
 =======
         <q-route-tab exact name="home" icon="home" to="/home" replace />
-        <q-route-tab exact name="contacts" icon="contacts" to="/messages" replace />
+        <q-route-tab exact name="contacts" icon="contacts" to="/chat" replace />
         <q-route-tab exact name="location" icon="where_to_vote" to="/location" replace />
         <q-route-tab exact name="assignment" icon="assignment" to="/assignment" replace />
         <q-route-tab exact name="menu" icon="reorder" to="/menu" replace />
