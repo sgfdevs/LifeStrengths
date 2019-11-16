@@ -1,5 +1,5 @@
 <template>
-    <div v-chat-scroll="{ smooth: true }" class="q-pa-sm">
+    <div v-chat-scroll="{ smooth: smoothScrollEnabled }" class="q-pa-sm">
         <q-chat-message
             v-for="(message, index) in group.messages"
             :key="index"
@@ -21,11 +21,17 @@
         },
         data: () => ({
             userId: 0,
+            smoothScrollEnabled: false,
         }),
         computed: {
             date() {
                 return dateTime => timeago.format(dateTime);
             },
+        },
+        mounted() {
+            this.$nextTick(() => {
+                this.smoothScrollEnabled = true;
+            });
         },
     };
 </script>
