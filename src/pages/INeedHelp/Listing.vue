@@ -5,15 +5,15 @@
                 <help-service-card
                     title="I need directions"
                     description="I'm lost or don't know how to get somewhere."
-                    to="emergency"></help-service-card>
+                    to="/"></help-service-card>
                 <help-service-card
                     title="I need a ride"
                     description="I don't have a way to get somewhere I need to go."
-                    to="emergency"></help-service-card>
+                    to="/"></help-service-card>
                 <help-service-card
                     title="I need to leave"
                     description="I need someone to pick me up from a bad situation."
-                    to="emergency"></help-service-card>
+                    to="/"></help-service-card>
                 <help-service-card
                     class="emergency-card"
                     title="I have an emergency"
@@ -32,7 +32,9 @@
             HelpServiceCard,
         },
         created() {
-            console.log('WTF');
+            if (this.$route.query.messageSent === 'true') {
+                this.showPopup = true;
+            }
         },
     };
 </script>

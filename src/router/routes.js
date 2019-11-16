@@ -26,6 +26,7 @@ const routes = [
                 component: () => import('../pages/INeedHelp/EmergencyForm.vue'),
                 meta: {
                     title: 'I Have an Emergency',
+                    toolbarColor: 'warning',
                 },
             },
             {
