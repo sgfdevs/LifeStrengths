@@ -12,7 +12,7 @@
         </div>
 
         <q-list class="menu-list">
-            <q-item v-for="(icon, i) in icons" clickable v-ripple :key="i">
+            <q-item v-for="(icon, i) in icons" clickable v-ripple :to="icon.to" :key="i">
                 <q-item-section avatar>
                     <q-icon :color="icon.color" :name="icon.name"/>
                 </q-item-section>
@@ -26,32 +26,34 @@
 
 <script>
     export default {
-        data() {
-            return {
-                icons: [
-                    {
-                        color: 'negative',
-                        name: 'announcement',
-                        title: 'INeedHelp',
-                    },
-                    {
-                        color: 'grey-8',
-                        name: 'assignment_ind',
-                        title: 'Profile',
-                    },
-                    {
-                        color: 'grey-8',
-                        name: 'list_alt',
-                        title: 'Wish List',
-                    },
-                    {
-                        color: 'grey-8',
-                        name: 'input',
-                        title: 'Log Out',
-                    },
-                ],
-            };
-        },
+        data: () => ({
+            icons: [
+                {
+                    color: 'negative',
+                    name: 'announcement',
+                    title: 'INeedHelp',
+                    to: '/i-need-help',
+                },
+                {
+                    color: 'grey-8',
+                    name: 'assignment_ind',
+                    title: 'Profile',
+                    to: '/home',
+                },
+                {
+                    color: 'grey-8',
+                    name: 'list_alt',
+                    title: 'Wish List',
+                    to: '/home',
+                },
+                {
+                    color: 'grey-8',
+                    name: 'input',
+                    title: 'Log Out',
+                    to: '/home',
+                },
+            ],
+        }),
     };
 </script>
 

@@ -18,7 +18,7 @@
                     class="emergency-card"
                     title="I have an emergency"
                     description="I'm in danger or in an extreme situation."
-                    to="emergency"></help-service-card>
+                    to="/i-need-help/emergency"></help-service-card>
             </q-list>
         </q-page>
     </q-page-container>

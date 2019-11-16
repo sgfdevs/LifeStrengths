@@ -2,6 +2,13 @@
     <q-layout view="lHh Lpr lFf">
         <q-header>
             <q-toolbar :class="toolbarClass">
+                <q-btn
+                    flat
+                    rounded
+                    dense
+                    v-if="$route.meta.backButton"
+                    @click="$router.go(-1)"
+                    icon="arrow_back"></q-btn>
                 <q-toolbar-title>
                     {{ title }}
                 </q-toolbar-title>
