@@ -21,7 +21,10 @@
         background-image: $main-gradient;
     }
     .logo-img {
+        width: 100%;
+        max-width: 300px;
         padding-top: 15px;
+
         @media (min-height: 600px) {
             padding: 0;
             position: relative;
