@@ -7,7 +7,8 @@
             <message-list
                 class="col-grow"
                 :navigation-offset="navigationOffset"
-                :group="selectedGroup"
+                :title="selectedGroup.title"
+                :messages="selectedGroup.messages"
             />
         </div>
     </q-page>

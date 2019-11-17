@@ -20,6 +20,7 @@
     },
     "dependencies": {
         "@quasar/extras": "^1.0.0",
+        "autosize": "^4.0.2",
         "quasar": "^1.0.0",
         "timeago.js": "^4.0.1"
     },
