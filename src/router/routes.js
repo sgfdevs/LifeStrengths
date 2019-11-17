@@ -71,7 +71,7 @@ const routes = [
             },
             {
                 path: 'chat',
-                component: () => import('../pages/MessagesPage.vue'),
+                component: () => import('../pages/ChatPage.vue'),
                 meta: {
                     title: 'Messages',
                 },
