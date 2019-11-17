@@ -69,6 +69,13 @@ const routes = [
                     backButton: true,
                 },
             },
+            {
+                path: 'chat',
+                component: () => import('../pages/ChatPage.vue'),
+                meta: {
+                    title: 'Messages',
+                },
+            },
         ],
     },
 ];
