@@ -1,5 +1,5 @@
 <template>
-    <q-layout view="lHh Lpr lFf">
+    <q-layout view="lHr LpR fFf">
         <q-header>
             <q-toolbar :class="toolbarClass">
                 <q-btn
@@ -14,23 +14,35 @@
                 </q-toolbar-title>
             </q-toolbar>
         </q-header>
+
+        <menu-drawer
+            v-model="drawer"
+        ></menu-drawer>
+
         <q-page-container>
             <router-view/>
         </q-page-container>
-        <q-footer>
-            <tabbed-navigation/>
+
+        <q-footer elevated >
+            <tabbed-navigation
+                @menuClick="drawer = !drawer"
+            />
         </q-footer>
     </q-layout>
 </template>
 
 <script>
     import TabbedNavigation from '../components/TabbedNavigation';
+    import MenuDrawer from '../components/MenuDrawer';
 
     export default {
+        data: () => ({
+            drawer: false,
+        }),
         components: {
             TabbedNavigation,
+            MenuDrawer,
         },
-
         computed: {
             title() {
                 return this.$route.meta.title;
@@ -46,5 +58,4 @@
 </script>
 
 <style scoped lang="scss">
-
 </style>

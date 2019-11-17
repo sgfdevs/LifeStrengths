@@ -15,6 +15,20 @@ const routes = [
                 },
             },
             {
+                path: 'transportation',
+                component: () => import('../pages/TransportationPage.vue'),
+                meta: {
+                    title: 'Transportation',
+                },
+            },
+            {
+                path: 'cirriculum',
+                component: () => import('../pages/CirriculumPage.vue'),
+                meta: {
+                    title: 'Cirriculum',
+                },
+            },
+            {
                 path: 'i-need-help',
                 component: () => import('../pages/INeedHelp/Listing.vue'),
                 meta: {
@@ -53,13 +67,6 @@ const routes = [
                 meta: {
                     title: 'I Need Directions',
                     backButton: true,
-                },
-            },
-            {
-                path: 'menu',
-                component: () => import('../pages/MenuPage.vue'),
-                meta: {
-                    title: 'Menu',
                 },
             },
         ],
