@@ -25,7 +25,8 @@
 
         <q-footer elevated >
             <tabbed-navigation
-                @menuClick="drawer = !drawer"
+                @tab-click="drawer = false"
+                @menu-click="drawer = !drawer"
             />
         </q-footer>
     </q-layout>
