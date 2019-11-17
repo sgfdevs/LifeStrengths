@@ -1,9 +1,12 @@
 <template>
     <q-page :style-fn="setPageHeight" class="q-pa-none">
         <div class="row justify-center">
-            <q-scroll-area class="col-shrink groups bg-grey" :style="scrollAreaStyle">
-                <message-groups/>
-            </q-scroll-area>
+
+            <message-groups
+                class="col-shrink groups bg-grey"
+                :navigation-offset="navigationOffset"
+            />
+
             <message-list
                 class="col-grow"
                 :navigation-offset="navigationOffset"
@@ -49,7 +52,7 @@
             groups: [
                 {
                     title: 'The Family',
-                    messages: [],
+                    messages: generateMessages(50),
                 },
             ],
         }),
@@ -61,7 +64,7 @@
             },
         },
         created() {
-            this.groups[0].messages = generateMessages(50);
+            // this.groups[0].messages = ;
             [this.selectedGroup] = this.groups;
         },
         methods: {
@@ -70,7 +73,9 @@
                 return { minHeight: offset ? `calc(100vh - ${offset}px)` : '100vh' };
             },
             addMessage() {
-                this.groups[0].messages.push(...generateMessages(1));
+                if (!this.selectedGroup) return;
+
+                this.selectedGroup.messages.push(...generateMessages(1));
             },
         },
         mounted() {
