@@ -22,9 +22,6 @@
             tab: 'home',
             previousTab: 'home',
         }),
-        mounted() {
-            console.log(this.drawerOpen);
-        },
         computed: {
             ...mapState('app', ['drawerOpen']),
         },

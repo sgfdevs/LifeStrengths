@@ -6,7 +6,6 @@ import app from './app';
 Vue.use(Vuex);
 
 export default function (/* { ssrContext } */) {
-    console.log({ app });
     const store = new Vuex.Store({
         modules: {
             app,
