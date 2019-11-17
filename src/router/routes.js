@@ -22,10 +22,10 @@ const routes = [
                 },
             },
             {
-                path: 'cirriculum',
-                component: () => import('../pages/CirriculumPage.vue'),
+                path: 'curriculum',
+                component: () => import('../pages/CurriculumPage.vue'),
                 meta: {
-                    title: 'Cirriculum',
+                    title: 'Curriculum',
                 },
             },
             {

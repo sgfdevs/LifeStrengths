@@ -10,7 +10,7 @@
         <q-route-tab exact class="q-px-xs" name="home" icon="home" to="/home" replace/>
         <q-route-tab exact class="q-px-xs" name="chat" icon="people" to="/chat" replace/>
         <q-route-tab exact class="q-px-xs" name="transportation" icon="room" to="/transportation" replace/>
-        <q-route-tab exact class="q-px-xs" name="cirriculum" icon="assignment" to="/cirriculum" replace/>
+        <q-route-tab exact class="q-px-xs" name="curriculum" icon="assignment" to="/curriculum" replace/>
         <q-tab class="q-px-xs" name="menu" icon="menu" @click="$emit('menu-click')"/>
     </q-tabs>
 </template>
