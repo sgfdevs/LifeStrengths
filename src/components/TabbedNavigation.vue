@@ -2,7 +2,6 @@
     <q-tabs
         :value="tab"
         @input="onTabChange"
-        v-model="tab"
         dense
         active-color="secondary"
         class="fixed-nav bg-white shadow-2 panel-icons"

@@ -1,3 +1,3 @@
 <template>
-    <p>Cirriculum</p>
+    <p>Curriculum</p>
 </template>
