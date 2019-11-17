@@ -25,7 +25,7 @@
         <q-dialog @hide="removeUrlQuery" :value="showPopup">
             <q-card>
                 <q-card-section>
-                <div class="text-h6 text-primary">Help Requested</div>
+                <div class="text-h6 dialouge-title">Help Requested</div>
                 </q-card-section>
 
                 <q-card-section>
@@ -76,5 +76,9 @@
                 color: $negative;
             }
         }
+    }
+
+    .dialouge-title {
+        color: $primary-dark;
     }
 </style>
