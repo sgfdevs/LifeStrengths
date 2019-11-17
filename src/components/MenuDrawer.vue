@@ -1,42 +1,40 @@
 <template>
     <q-drawer
-            :value="value"
-            @input="val => $emit('input', val)"
-            :breakpoint="1"
-            :width="width"
-            bordered
-            overlay
-            side="left"
-        >
-            <div class="banner">
-                <q-avatar
-                    class="avatar">
-                    <img
-                        src="https://i.pravatar.cc/150"
-                        style="border: 2px solid white"
-                    >
-                </q-avatar>
-                <span style="color:white">Yolanda Thorton</span>
-            </div>
+        :value="drawerOpen"
+        :breakpoint="1"
+        :width="width"
+        bordered
+        overlay
+        side="left"
+    >
+        <div class="banner">
+            <q-avatar
+                class="avatar">
+                <img
+                    src="https://i.pravatar.cc/150"
+                    style="border: 2px solid white"
+                >
+            </q-avatar>
+            <span style="color:white">Yolanda Thorton</span>
+        </div>
 
-            <q-list class="menu-list">
-                <q-item v-for="(icon, i) in icons" clickable v-ripple :to="icon.to" :key="i">
-                    <q-item-section avatar>
-                        <q-icon :color="icon.color" :name="icon.name"/>
-                    </q-item-section>
-                    <q-item-section>
-                        <span>{{ icon.title }}</span>
-                    </q-item-section>
-                </q-item>
-            </q-list>
-        </q-drawer>
+        <q-list class="menu-list">
+            <q-item v-for="(icon, i) in icons" clickable v-ripple :to="icon.to" :key="i">
+                <q-item-section avatar>
+                    <q-icon :color="icon.color" :name="icon.name"/>
+                </q-item-section>
+                <q-item-section>
+                    <span>{{ icon.title }}</span>
+                </q-item-section>
+            </q-item>
+        </q-list>
+    </q-drawer>
 </template>
 
 <script>
+    import { mapState, mapMutations } from 'vuex';
+
     export default {
-        props: {
-            value: Boolean,
-        },
         data: () => ({
             width: 0,
             icons: [
@@ -66,6 +64,9 @@
                 },
             ],
         }),
+        computed: {
+            ...mapState('app', ['drawerOpen']),
+        },
         mounted() {
             this.updateWidth();
             window.addEventListener('resize', this.updateWidth);
@@ -74,6 +75,7 @@
             window.removeEventListener('resize', this.updateWidth);
         },
         methods: {
+            ...mapMutations(['updateDrawerOpen']),
             updateWidth() {
                 this.width = window.innerWidth;
             },

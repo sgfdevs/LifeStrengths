@@ -15,19 +15,14 @@
             </q-toolbar>
         </q-header>
 
-        <menu-drawer
-            v-model="drawer"
-        ></menu-drawer>
+        <menu-drawer />
 
         <q-page-container>
             <router-view/>
         </q-page-container>
 
         <q-footer elevated >
-            <tabbed-navigation
-                @tab-click="drawer = false"
-                @menu-click="drawer = !drawer"
-            />
+            <tabbed-navigation />
         </q-footer>
     </q-layout>
 </template>
@@ -37,9 +32,6 @@
     import MenuDrawer from '../components/MenuDrawer';
 
     export default {
-        data: () => ({
-            drawer: false,
-        }),
         components: {
             TabbedNavigation,
             MenuDrawer,
