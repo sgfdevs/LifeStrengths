@@ -3,7 +3,7 @@
         <div class="row justify-center">
 
             <message-groups
-                class="col-shrink groups bg-grey"
+                class="col-shrink groups"
                 :navigation-offset="navigationOffset"
             />
 
@@ -91,5 +91,6 @@
     .groups {
         min-width: 60px;
         max-width: 60px;
+        background-color: $off-white;
     }
 </style>
