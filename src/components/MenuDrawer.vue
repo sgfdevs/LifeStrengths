@@ -41,7 +41,7 @@
                 {
                     color: 'negative',
                     name: 'announcement',
-                    title: 'INeedHelp',
+                    title: 'I Need Help',
                     to: '/i-need-help',
                 },
                 {
