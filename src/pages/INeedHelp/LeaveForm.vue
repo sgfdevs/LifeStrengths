@@ -56,7 +56,20 @@
 
 <script>
     export default {
-        name: 'LeaveForm',
+        data: () => ({
+            selected: '',
+            info: '',
+        }),
+        methods: {
+            onButtonTap() {
+                this.$router.replace({
+                    path: '/i-need-help',
+                    query: {
+                        messageSent: 'true',
+                    },
+                });
+            },
+        },
     };
 </script>
 
