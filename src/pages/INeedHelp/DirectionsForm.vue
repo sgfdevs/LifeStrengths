@@ -27,6 +27,7 @@
             </q-item>
             <q-item>
                 <q-radio
+                    class="q-mb-xl"
                     v-model="selected"
                     val="fifth"
                     label="Other"
@@ -35,7 +36,7 @@
             </q-item>
             <q-item>
                 <q-input
-                    class="full-width"
+                    class="full-width q-px-md"
                     autogrow
                     v-model="info"
                     label="More information"
