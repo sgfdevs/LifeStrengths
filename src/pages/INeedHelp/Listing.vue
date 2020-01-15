@@ -5,15 +5,15 @@
                 <help-service-card
                     title="I need directions"
                     description="I'm lost or don't know how to get somewhere."
-                    to="/"></help-service-card>
+                    to="/i-need-help/directions"></help-service-card>
                 <help-service-card
                     title="I need a ride"
                     description="I don't have a way to get somewhere I need to go."
-                    to="/"></help-service-card>
+                    to="/i-need-help/need-a-ride"></help-service-card>
                 <help-service-card
                     title="I need to leave"
                     description="I need someone to pick me up from a bad situation."
-                    to="/"></help-service-card>
+                    to="/i-need-help/need-to-leave"></help-service-card>
                 <help-service-card
                     class="emergency-card"
                     title="I have an emergency"

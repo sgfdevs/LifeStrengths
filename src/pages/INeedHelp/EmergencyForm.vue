@@ -43,7 +43,7 @@
             </q-item>
             <q-item>
                 <q-input
-                    class="full-width"
+                    class="full-width q-px-md"
                     autogrow
                     v-model="info"
                     label="More information"
